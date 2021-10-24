@@ -1,7 +1,7 @@
 //declare array to save json info
 let cssQuestions = [];
 //fetch info from json file
-fetch("../json/cssQuize.json")
+fetch("json/cssQuize.json")
   .then((res) => {
     return res.json();
   })

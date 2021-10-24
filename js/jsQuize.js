@@ -2,7 +2,7 @@
 let jsQuestions = [];
 
 //fetch info from json file
-fetch("../json/jsQuize.json")
+fetch("json/jsQuize.json")
   .then((res) => {
     return res.json();
   })
