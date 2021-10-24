@@ -1,5 +1,5 @@
 let htmlQuestions = []
-fetch('./json/jsQuize.json')
+fetch('./json/htmlQuize.json')
   .then((res) => {
     return res.json()
   })
