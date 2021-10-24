@@ -141,7 +141,7 @@ login.onclick = function (e) {
 
       if (state == true) {
         state = false;
-        window.open("../category.html", "_self");
+        window.open("./category.html", "_self");
       } else {
         errMsg.innerHTML = "Email or password is wrong";
         e.preventDefault();
