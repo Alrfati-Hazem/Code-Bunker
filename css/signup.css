@@ -373,3 +373,14 @@ strong {
 #login-password:focus {
   background-color: rgb(251, 208, 158);
 }
+
+@media (max-width: 767.8px) {
+  .form {
+    min-width: 0;
+    width: 300px;
+  }
+  .forms-section {
+    overflow: hidden !important;
+  }
+}
+
