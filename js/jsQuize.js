@@ -273,5 +273,5 @@ function queCounter(index) {
 
 let showAnswers = document.getElementById('showAnswers')
 showAnswers.onclick = function () {
-  window.open('../jsAnswers.html', '_self')
+  window.open('./jsAnswers.html', '_self')
 }
