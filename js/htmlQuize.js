@@ -222,7 +222,7 @@ function startTimer(time) {
 
       timeText.textContent = 'Time Off' //change the time text to time off
       const allOptions = option_list.children.length //getting all option items
-      let correcAns = htmlQuestions[que_count].answer //getting correct answer 
+      // let correcAns = htmlQuestions[que_count].answer //getting correct answer 
       for (i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add('disabled') //once user select an option then disabled all options
       }
