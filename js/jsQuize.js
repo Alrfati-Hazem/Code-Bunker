@@ -199,7 +199,7 @@ function showResult() {
     document.querySelector('.activeResult').style.background = '#13c813'
     document.querySelector('.complete_text').style.color = 'white'
     document.querySelector('.score_text').style.color = 'white'
-    imgResult.src = '../imgs/like.gif'
+    imgResult.src = './imgs/like.gif'
   } else {
     // if user scored less than 1
     let scoreTag =
@@ -212,7 +212,7 @@ function showResult() {
     document.querySelector('.activeResult').style.background = 'red'
     document.querySelector('.complete_text').style.color = 'white'
     document.querySelector('.score_text').style.color = 'white'
-    imgResult.src = '../imgs/broken-heart.gif'
+    imgResult.src = './imgs/broken-heart.gif'
   }
 }
 
