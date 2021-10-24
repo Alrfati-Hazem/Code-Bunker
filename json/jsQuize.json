@@ -1,0 +1,54 @@
+[
+  {
+    "numb": 1,
+    "question": " Which of the following is correct about JavaScript?",
+    "answer": "All of the above",
+    "options": [
+      "JavaScript is a lightweight and interpreted programming language.",
+      "JavaScript has object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.",
+      " The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers.",
+      "All of the above"
+    ]
+  },
+  {
+    "numb": 2,
+    "question": "Which built-in method combines the text of two strings and returns a new string?",
+    "answer": "concat()",
+    "options": ["append()", "concat()", "attach()", "none of the above"]
+  },
+  {
+    "numb": 3,
+    "question": "Which built-in method returns the calling string value converted to lower case?",
+    "answer": "toLowerCase()",
+    "options": [
+      "toLowerCase()",
+      "toLower()",
+      "changeCase(case)",
+      "none of the above"
+    ]
+  },
+  {
+    "numb": 4,
+    "question": "Which of the following function of String object returns the index within the calling String object of the last occurrence of the specified value?",
+    "answer": "lastIndexOf()",
+    "options": ["search()", "IndexOf()", "lastIndexOf()", "none of the above"]
+  },
+  {
+    "numb": 5,
+    "question": " Which of the following function of Array object sorts the elements of an array?",
+    "answer": "sort()",
+    "options": ["toString()", "sort()", "unshift()", "none of the above"]
+  },
+  {
+    "numb": 6,
+    "question": "Which of the following function of String object creates a string to be displayed as bold as if it were in a <b> tag?",
+    "answer": "bold()",
+    "options": ["anchor()", "big()", "blink()", "bold()"]
+  },
+  {
+    "numb": 7,
+    "question": "    Which of the following function of String object creates an HTML hypertext link that requests another URL?",
+    "answer": "link()",
+    "options": ["link()", "sub()", "sup()", "small()"]
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "numb": 1,
+    "question": "What does HTML stand for ?",
+    "answer": "Hyper Text Markup Language",
+    "options": [
+      "Hyper Text Preprocessor",
+      "Hyper Text Markup Language",
+      "Hyper Text Multiple Language",
+      "Hyper Tool Multi Language"
+    ]
+  },
+  {
+    "numb": 2,
+    "question": "How many tags are in a regular element ?",
+    "answer": "2",
+    "options": ["1", "2", "3", "4"]
+  },
+  {
+    "numb": 3,
+    "question": "< br/> What type of tag is this ?",
+    "answer": "Break tag",
+    "options": ["Break tag", "An opening tag", "A broken one", "none"]
+  },
+  {
+    "numb": 4,
+    "question": "Where is the meta tag only found ?",
+    "answer": "The home page",
+    "options": ["The last page", "The second page", "The home page", "none"]
+  },
+  {
+    "numb": 5,
+    "question": " What is an element that does not have a closing tag called ?",
+    "answer": "Empty element",
+    "options": ["Empty element", "Tag", "Closed element", "none"]
+  },
+  {
+    "numb": 6,
+    "question": " Where do all items for the same website need to be saved ?",
+    "answer": "In the same folder",
+    "options": [
+      "Where ever is fine",
+      "In the same folder",
+      "In different folders",
+      "none"
+    ]
+  },
+  {
+    "numb": 7,
+    "question": "What is the difference between an opening tag and a closing tag ?",
+    "answer": "Closing tag has a / in front",
+    "options": [
+      " Opening tag has a / in front",
+      "Closing tag has a / in front",
+      "There is no difference",
+      "none"
+    ]
+  }
+]
