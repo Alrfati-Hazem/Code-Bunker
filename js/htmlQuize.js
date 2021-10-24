@@ -1,5 +1,5 @@
 let htmlQuestions = []
-fetch('./json/htmlQuize.json')
+fetch('./json/jsQuize.json')
   .then((res) => {
     return res.json()
   })
@@ -133,9 +133,6 @@ function showQuetions(index) {
     option[i].setAttribute('onclick', 'optionSelected(this)')
   }
 }
-// creating the new div tags which for icons
-// let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
-// let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 let arr1 = []
 //if user clicked on option
@@ -149,9 +146,6 @@ function optionSelected(answer) {
   const allOptions = option_list.children.length //getting all option items
 
   ///////////////////////////////
-  // localStorage.setItem('items', JSON.stringify(itemsArray))
-  // const data = JSON.parse(localStorage.getItem('items'))
-  // let uesrAnsLocal=
 
   localStorage.setItem('userAnswers', JSON.stringify(userAns))
   let ansArray = localStorage.getItem('userAnswers')
@@ -176,17 +170,7 @@ function optionSelected(answer) {
     console.log('Correct Answer')
     console.log('Your correct answers = ' + userScore)
   } else {
-    // answer.classList.add("incorrect"); //adding red color to correct selected option
-    // answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
     console.log('Wrong Answer')
-
-    // for(i=0; i < allOptions; i++){
-    //     if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
-    //         // option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
-    //         // option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
-    //         console.log("Auto selected correct answer.");
-    //     }
-    // }
   }
 
   for (i = 0; i < allOptions; i++) {
@@ -215,15 +199,6 @@ function showResult() {
     document.querySelector('.activeResult').style.background = '#13c813'
     document.querySelector('.complete_text').style.color = 'white'
     document.querySelector('.score_text').style.color = 'white'
-    // } else if (userScore > 1) {
-    //   // if user scored more than 1
-    //   let scoreTag =
-    //     '<span>and nice , You got <p>' +
-    //     userScore +
-    //     '</p> out of <p>' +
-    //     htmlQuestions.length +
-    //     '</p></span>'
-    //   scoreText.innerHTML = scoreTag
     imgResult.src = '../imgs/like.gif'
   } else {
     // if user scored less than 1
@@ -298,5 +273,5 @@ function queCounter(index) {
 
 let showAnswers = document.getElementById('showAnswers')
 showAnswers.onclick = function () {
-  window.open('../htmlAnswers.html', '_self')
+  window.open('../jsAnswers.html', '_self')
 }
