@@ -79,7 +79,7 @@ buttonSignUP.addEventListener("click", function (e) {
 
     localStorage.setItem("logName", firstName.value);
     console.log(localStorage.getItem("information"));
-    window.open("./category.html", "_self");
+    window.open("../category.html", "_self");
   }
 });
 ///////////addInformationToArray
