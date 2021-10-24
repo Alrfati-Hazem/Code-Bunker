@@ -3,7 +3,7 @@ let tbody = document.querySelector('tbody')
 let items = localStorage.getItem('userAnswerArray').split(',')
 
 for (let i = 0; i < items.length; i++) {
-  fetch('../json/cssQuize.json')
+  fetch('./json/cssQuize.json')
     .then((res) => {
       return res.json()
     })
