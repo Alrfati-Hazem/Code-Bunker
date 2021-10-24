@@ -79,7 +79,7 @@ buttonSignUP.addEventListener("click", function (e) {
 
     localStorage.setItem("logName", firstName.value);
     console.log(localStorage.getItem("information"));
-    window.open("../category.html", "_self");
+    window.open("./category.html", "_self");
   }
 });
 ///////////addInformationToArray
@@ -141,7 +141,7 @@ login.onclick = function (e) {
 
       if (state == true) {
         state = false;
-        window.open("../category.html", "_self");
+        window.open("./category.html", "_self");
       } else {
         errMsg.innerHTML = "Email or password is wrong";
         e.preventDefault();
