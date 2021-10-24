@@ -137,14 +137,15 @@ login.onclick = function (e) {
       if (EmailLogIn === element.email && PasswordLogIn === element.password) {
         state = true;
         localStorage.setItem("logName", element.FirstName);
+      } else {
+        e.preventDefault();
+        errMsg.innerText = "Email or password is wrong";
       }
 
       if (state == true) {
         state = false;
         window.open("./category.html", "_self");
-      } else {
-        errMsg.innerHTML = "Email or password is wrong";
-        e.preventDefault();
+        errMsg.innerHTML = "";
       }
     });
   }
