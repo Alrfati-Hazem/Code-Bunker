@@ -10,7 +10,6 @@ fetch('./json/htmlQuize.json')
 console.log(htmlQuestions)
 
 //selecting all required elements
-const start_btn = document.querySelector('.start_btn button')
 const info_box = document.querySelector('.info_box')
 const exit_btn = info_box.querySelector('.buttons .quit')
 const continue_btn = info_box.querySelector('.buttons .restart')
@@ -22,13 +21,7 @@ const timeText = document.querySelector('.timer .time_left_txt')
 const timeCount = document.querySelector('.timer .timer_sec')
 
 // if startQuiz button clicked
-
 info_box.classList.add('activeInfo') //show info box
-
-// if exitQuiz button clicked
-exit_btn.onclick = () => {
-  info_box.classList.remove('activeInfo') //hide info box
-}
 
 // if continueQuiz button clicked
 continue_btn.onclick = () => {
@@ -99,11 +92,11 @@ next_btn.onclick = () => {
   }
 }
 
-// getting htmlQuestions and options from array
+// getting htmlQuestions and options 
 function showQuetions(index) {
   const que_text = document.querySelector('.que_text')
 
-  //creating a new span and div tag for question and option and passing the value using array index
+  //creating a new span and div tag for question and option
   let que_tag =
     '<span>' +
     htmlQuestions[index].numb +
@@ -145,8 +138,8 @@ function optionSelected(answer) {
   let correcAns = htmlQuestions[que_count].answer //getting correct answer from array
   const allOptions = option_list.children.length //getting all option items
 
-  ///////////////////////////////
 
+//save user answer in local storage 
   localStorage.setItem('userAnswers', JSON.stringify(userAns))
   let ansArray = localStorage.getItem('userAnswers')
     ? JSON.parse(localStorage.getItem('userAnswers'))
@@ -160,17 +153,12 @@ function optionSelected(answer) {
 
   console.log(arr1)
 
-  ///////////////////////////////////////////
-
   if (userAns == correcAns) {
-    //if user selected option is equal to array's correct answer
+    //if user selected option is equal to json correct answer
     userScore += 1 //upgrading score value with 1
-    // answer.classList.add("correct"); //adding green color to correct selected option
-    // answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
+  
     console.log('Correct Answer')
     console.log('Your correct answers = ' + userScore)
-  } else {
-    console.log('Wrong Answer')
   }
 
   for (i = 0; i < allOptions; i++) {
@@ -199,6 +187,7 @@ function showResult() {
     document.querySelector('.activeResult').style.background = '#13c813'
     document.querySelector('.complete_text').style.color = 'white'
     document.querySelector('.score_text').style.color = 'white'
+
     imgResult.src = './imgs/like.gif'
   } else {
     // if user scored less than 1
@@ -221,6 +210,7 @@ function startTimer(time) {
   function timer() {
     timeCount.textContent = time //changing the value of timeCount with time value
     time-- //decrement the time value
+
     if (time < 9) {
       //if timer is less than 9
       let addZero = timeCount.textContent
@@ -229,17 +219,10 @@ function startTimer(time) {
     if (time < 0) {
       //if timer is less than 0
       clearInterval(counter) //clear counter
+
       timeText.textContent = 'Time Off' //change the time text to time off
       const allOptions = option_list.children.length //getting all option items
-      let correcAns = htmlQuestions[que_count].answer //getting correct answer from array
-      for (i = 0; i < allOptions; i++) {
-        if (option_list.children[i].textContent == correcAns) {
-          //if there is an option which is matched to an array answer
-          option_list.children[i].setAttribute('class', 'option correct') //adding green color to matched option
-          option_list.children[i].insertAdjacentHTML('beforeend', tickIconTag) //adding tick icon to matched option
-          console.log('Time Off: Auto selected correct answer.')
-        }
-      }
+      let correcAns = htmlQuestions[que_count].answer //getting correct answer 
       for (i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add('disabled') //once user select an option then disabled all options
       }
@@ -273,5 +256,5 @@ function queCounter(index) {
 
 let showAnswers = document.getElementById('showAnswers')
 showAnswers.onclick = function () {
-  window.open('./jsAnswers.html', '_self')
+  window.open('./htmlAnswers.html', '_self')
 }
