@@ -130,7 +130,7 @@ login.onclick = function (e) {
   localStorage.setItem("inPassword", loginPassword.value);
   let PasswordLogIn = localStorage.getItem("inPassword");
   if (tasks === null) {
-    errMsg.innerHTML = "please creat account first";
+    errMsg.innerHTML = "please create an account";
   } else {
     tasks.forEach((element) => {
       state = false;
