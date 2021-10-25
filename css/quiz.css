@@ -405,5 +405,9 @@ footer button.show {
   .result_box {
     width: 95%;
   }
+    .result_box .buttons button,
+  .result_box .score_text span {
+    font-size: 15px;
+  }
 }
 
