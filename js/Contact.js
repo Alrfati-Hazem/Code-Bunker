@@ -60,7 +60,7 @@ submit.addEventListener("click", function (e) {
         
         
             alert("your message sent successfully");
-            window.open ("/index.html");
+            window.open ("./index.html");
           
     }
         
