@@ -316,3 +316,9 @@ footer .container .social-icon a i {
 footer .container .social-icon a i:hover {
   font-size: 28px;
 }
+
+@media (max-width: 1199.8px) {
+  .table {
+    min-width: 0 !important;
+  }
+}
