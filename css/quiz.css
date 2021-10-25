@@ -390,3 +390,20 @@ footer button.show {
   color: #fff;
   background: #4e4d4c;
 }
+
+
+@media (max-width: 767.8px) {
+  div.info_box {
+    width: 95%;
+  }
+  div.quiz_box {
+    width: 95%;
+  }
+  .time_line {
+    max-width: 100%;
+  }
+  .result_box {
+    width: 95%;
+  }
+}
+
