@@ -132,9 +132,14 @@ login.onclick = function (e) {
   if (tasks === null) {
     errMsg.innerHTML = "please create an account";
   } else {
-    tasks.forEach((element) => {
+   tasks.forEach((element) => {
       state = false;
-      if (EmailLogIn === element.email && PasswordLogIn === element.password) {
+      if (EmailLogIn === "" && PasswordLogIn === "") {
+        errMsg.innerText = "Please enter your Email and password ";
+      } else if (
+        EmailLogIn === element.email &&
+        PasswordLogIn === element.password
+      ) {
         state = true;
         localStorage.setItem("logName", element.FirstName);
       } else {
@@ -143,6 +148,7 @@ login.onclick = function (e) {
       }
 
       if (state == true) {
+        emailStat = false;
         state = false;
         window.open("./category.html", "_self");
         errMsg.innerHTML = "";
