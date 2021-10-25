@@ -29,6 +29,9 @@ if (localStorage.getItem("information")) {
 }
 // localStorage.clear();
 //signup click/////////////////////
+let data = window.localStorage.getItem("information");
+let tasks = JSON.parse(data);
+console.log(tasks);
 buttonSignUP.addEventListener("click", function (e) {
   e.preventDefault();
   if (firstName.value === "") {
@@ -48,10 +51,31 @@ buttonSignUP.addEventListener("click", function (e) {
   if (signUpEmail.value === "") {
     emailREQ.innerHTML = `/The email field is required/`;
   } else {
-    if (regexEmail.test(signUpEmail.value)) {
-      emailREQ.innerText = "";
+    if (tasks === null) {
+      if (regexEmail.test(signUpEmail.value)) {
+        emailREQ.innerText = "";
+        emailStat = true;
+      } else {
+        emailREQ.innerText = "/The email should be like Eg/ ";
+      }
     } else {
-      emailREQ.innerText = "/The email should be like Eg/ ";
+      if (regexEmail.test(signUpEmail.value)) {
+        emailREQ.innerText = "";
+        for (let i = 0; i < tasks.length; i++) {
+          if (signUpEmail.value === tasks[i].email) {
+            console.log(tasks[i].email);
+            emailREQ.innerText = /This email has account/;
+            console.log(/This email has account/);
+            passwordREQ.innerHTML = "";
+            emailStat = false;
+            e.preventDefault();
+          } else {
+            emailStat = true;
+          }
+        }
+      } else {
+        emailREQ.innerText = "/The email should be like Eg/ ";
+      }
     }
   }
   if (signUpPassword.value === "") {
@@ -68,8 +92,10 @@ buttonSignUP.addEventListener("click", function (e) {
     signUpEmail.value.match(regexEmail) &&
     signUpPassword.value.match(regexPass) &&
     firstName.value.length >= 3 &&
-    secondName.value.length >= 3
+    secondName.value.length >= 3 &&
+    emailStat == true
   ) {
+    emailStat = false;
     addInformationToArray(
       firstName.value,
       secondName.value,
@@ -132,7 +158,7 @@ login.onclick = function (e) {
   if (tasks === null) {
     errMsg.innerHTML = "please create an account";
   } else {
-   tasks.forEach((element) => {
+    tasks.forEach((element) => {
       state = false;
       if (EmailLogIn === "" && PasswordLogIn === "") {
         errMsg.innerText = "Please enter your Email and password ";
