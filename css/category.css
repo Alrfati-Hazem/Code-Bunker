@@ -189,9 +189,13 @@ li.home-btn-login.nav-item:hover .nav-link {
   .home-btn-login {
     margin-left: 0;
   }
-  .categories-container {
-    display: flex;
-    flex-direction: column;
+  .row > * {
+    width: 95%;
+  }
+  .categories-container .box-container {
+    padding-bottom: 40 px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
