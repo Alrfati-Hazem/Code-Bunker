@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Bunker | Sign Up</title>
+    <link rel="stylesheet" href="../css/signup.css" />
+  </head>
+  <body>
+    <section class="forms-section">
+      <div class="forms">
+        <div class="form-wrapper is-active">
+          <button type="button" class="switcher switcher-login">
+            Sign Up
+            <span class="underline"></span>
+          </button>
+          <form class="form form-login">
+            <div class="logo">
+              <img src="../imgs/logoH.png" alt="" />
+            </div>
+            <fieldset>
+              <div class="input-names">
+                <div class="input-name">
+                  <label for="first-name">
+                    First Name
+                    <strong id="FirstREQ" class="color-danger"></strong>
+                  </label>
+                  <input id="first-name" type="text" />
+                </div>
+                <div class="input-name">
+                  <label for="second-name">
+                    Last Name
+                    <strong id="secondREQ" class="color-danger"></strong>
+                  </label>
+                  <input id="second-name" type="text" />
+                </div>
+              </div>
+
+              <div class="input-block">
+                <label for="signup-email">
+                  E-mail
+                  <strong id="emailREQ" class="color-danger"></strong>
+                </label>
+                <input id="signup-email" type="email" />
+                <small class="email-eg">
+                  eg: username@domain.com
+                  <br />
+                </small>
+              </div>
+              <div class="input-block">
+                <label for="signup-password">
+                  Password
+                  <strong id="passwordREQ" class="color-danger"></strong>
+                </label>
+                <input id="signup-password" type="password" />
+              </div>
+            </fieldset>
+            <button type="submit" class="btn-login">Sign Up</button>
+          </form>
+        </div>
+        <div class="form-wrapper">
+          <button type="button" class="switcher switcher-signup">
+            Login
+            <span class="underline"></span>
+          </button>
+          <form class="form form-signup">
+            <div class="logo">
+              <img src="../imgs/logoH.png" alt="" />
+            </div>
+            <fieldset class="fieldset-login">
+              <div class="input-block">
+                <label for="login-email">E-mail</label>
+                <input id="login-email" type="email" required />
+              </div>
+              <div class="input-block">
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" required />
+              </div>
+            </fieldset>
+            <div class="errMsg"></div>
+            <button type="submit" class="btn-signup">Log In</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="../js/signup.js"></script>
+  </body>
+</html>
