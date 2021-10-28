@@ -106,14 +106,10 @@ li.home-btn-login.nav-item:hover .nav-link {
 .home-content .home-btn-getStart {
   border: none;
   background-color: var(--main-color);
-  padding: 12px 18px;
   border-radius: 5px;
   font-size: 18px;
-}
-
-.home-content .home-btn-getStart a {
+  padding: 12px 18px;
   color: white;
-  text-decoration: none;
 }
 
 .home-image {
