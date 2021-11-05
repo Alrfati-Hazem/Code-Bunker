@@ -9,6 +9,7 @@ window.onload = function () {
 document.body.addEventListener('click', function (event) {
   if (!event.target.classList.contains('login-click')) {
     if (localStorage.getItem('sessionState') === 'null') {
+      event.preventDefault()
       alert('At first you have to log in ')
       window.open('../html/signup.html', '_self')
     }
